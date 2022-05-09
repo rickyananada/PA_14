@@ -1,5 +1,0 @@
-<x-adminLayout>
-    
-    
-
-</x-adminLayout>

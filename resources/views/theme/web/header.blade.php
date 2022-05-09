@@ -16,6 +16,9 @@
                             </div>
                             <div class="top-cart-action">
                                 <a href="{{ route('user.auth.logout') }}" class="button button-3d button-small m-0">Logout</a>
+                                @if( Auth::user()->role == 'admin')
+                                <a href="{{ route('admin.product.index') }}" class="button button-3d button-small m-0">Tampilan Admin</a>
+                                @endif
                             </div>
                         </div>
                     </div>

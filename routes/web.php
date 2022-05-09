@@ -28,7 +28,7 @@ Route::prefix('user/')->name('user.')->group(function(){
 });
 
 Route::prefix('admin/')->name('admin.')->group(function(){
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('critics');
     Route::get('/', [AuthAdminController::class, 'index']);
     Route::prefix('auth/')->name('auth.')->group(function(){
         Route::get('',[AuthAdminController::class, 'index'])->name('index');

@@ -35,6 +35,9 @@
                                             </div>
                                             <div class="separator my-2"></div>
                                             <div class="menu-item px-5">
+                                                <a href="{{ route('home') }}" class="menu-link px-5">Home</a>
+                                            </div>
+                                            <div class="menu-item px-5">
                                                 <a href="{{ route('admin.auth.logout') }}" class="menu-link px-5">Keluar</a>
                                             </div>
                                         </div>
