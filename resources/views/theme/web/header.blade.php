@@ -36,8 +36,8 @@
                         <li class="menu-item"><a href="{{ route('product.index') }}" class="menu-link" ><div>Gift Bouquet</div></a>
                         </li>
                         <li class="menu-item"><a class="menu-link" href="#"><div>Bouquet Request</div></a></li>
-                        <li class="menu-item"><a class="menu-link" href="#"><div>Profil</div></a></li>
                         <li class="menu-item"><a class="menu-link" href="#"><div>Kritik & Saran</div></a></li>
+                        <li class="menu-item"><a class="menu-link" href="{{ route('profile.index') }}"><div>Profil</div></a></li>
                     </ul>
                 </nav>
             </div>

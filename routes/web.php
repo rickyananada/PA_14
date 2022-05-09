@@ -4,16 +4,18 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\web\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\user\AuthController;
-use App\Http\Controllers\admin\AuthAdminController;
+use App\Http\Controllers\web\UdahGilaController;
 use App\Http\Controllers\admin\CriticsController;
+use App\Http\Controllers\admin\AuthAdminController;
 use App\Http\Controllers\web\ProductUserController;
+use App\Http\Controllers\admin\WebProfileController;
 use App\Http\Controllers\admin\ProductAdminController;
 use App\Http\Controllers\admin\ProductCategoryController;
-use App\Http\Controllers\admin\WebProfileController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('product', ProductUserController::class);
+Route::resource('profile', UdahGilaController::class);
 
 
 Route::prefix('user/')->name('user.')->group(function(){

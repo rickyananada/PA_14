@@ -31,7 +31,7 @@
                                 <div class="line"></div>
                                 <form class="cart mb-0 d-flex justify-content-between align-items-center" method="post" enctype='multipart/form-data'>
                                     
-                                    <button type="submit" class="add-to-cart button m-0">Add to cart</button>
+                                    <button type="submit"  class="add-to-cart button m-0">Add to cart</button>
                                 </form>
                                 <div class="line"></div>
                                 <p>{!! $product->description_product !!}</p>
