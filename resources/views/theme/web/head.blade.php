@@ -38,7 +38,7 @@
 		background-color: rgba(215, 177, 190, 0.9);
 	}
 	.slide-3 {
-		background-image: url("{{ asset('img/gif/gif3.gif') }}");
+		background-image: url("{{ asset('img/gif/gif3.mp4') }}");
 		background-color: rgba(215, 177, 190, 0.9);
 	}
 	</style>
