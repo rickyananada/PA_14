@@ -28,6 +28,12 @@
 
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="{{ asset('flosun/css/style.css') }}">
+	<style>
+		.breadcrumbs-area {
+        padding: auto;
+        background: #f6f6f6 url({{ asset('img/gif/gif1.gif') }}) no-repeat scroll center center/cover
+    }
+	</style>
 
 </head>
 
