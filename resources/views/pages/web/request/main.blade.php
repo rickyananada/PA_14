@@ -1,4 +1,4 @@
-<x-team1Layout title="Profile">
+<x-webLayout title="Profile">
     <div class="breadcrumbs-area position-relative">
         <div class="container">
             <div class="row">
@@ -83,4 +83,4 @@
             </div>
         </div>
     </div>
-</x-team1Layout>
+</x-webLayout>
