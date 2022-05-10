@@ -31,9 +31,15 @@
 	<style>
 		.breadcrumbs-area {
         padding: auto;
-        background: #f6f6f6 url({{ asset('img/gif/gif1.gif') }}) no-repeat scroll center center/cover
+        background: #f6f6f6 url("{{ asset('img/gif/gif1.gif') }}"); no-repeat scroll center center/cover
     }
+	.slide-4 {
+		background-image: url("{{ asset('img/gif/gif2.gif') }}");
+		background-color: rgba(215, 177, 190, 0.9)
+	}
+
 	</style>
+	
 
 </head>
 
