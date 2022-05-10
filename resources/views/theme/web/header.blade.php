@@ -24,7 +24,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{{ route('request') }}">
                                     <span class="menu-text"> Bouquet Request</span>
                                 </a>
                             </li>
@@ -102,7 +102,7 @@
                             </li>
                             <li class="menu-item-has-children"><a href="{{ route('product.index') }}">Gift Bouquet</a>
                             </li>
-                            <li class="menu-item-has-children "><a href="#">Bouquet Request</a>
+                            <li class="menu-item-has-children "><a href="{{ route('request') }}">Bouquet Request</a>
                             </li>
                             <li class="menu-item-has-children "><a href="{{ route('critics') }}">Kritik & Saran</a>
                             </li>

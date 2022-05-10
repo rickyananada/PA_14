@@ -31,7 +31,7 @@
                                 <a href="{{ route('product.index') }}">Gift Bouquet</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#">Bouquet request</a>
+                                <a href="{{ route('request') }}">Bouquet request</a>
                             </li>
                             <li class="menu-item">
                                 <a href="{{ route('critics') }}">Kritik & Saran</a>

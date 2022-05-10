@@ -12,12 +12,14 @@ use App\Http\Controllers\admin\WebProfileController;
 use App\Http\Controllers\admin\ProductAdminController;
 use App\Http\Controllers\admin\ProductCategoryController;
 use App\Http\Controllers\web\CriticsUserController;
+use App\Http\Controllers\web\RequestUserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('product', ProductUserController::class);
 Route::get('/profile', [ProfileWebController::class, 'index'])->name('profile');
 Route::get('/critics', [CriticsUserController::class, 'index'])->name('critics');
+Route::get('/request', [RequestUserController::class, 'index'])->name('request');
 
 
 
