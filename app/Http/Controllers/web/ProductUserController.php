@@ -13,12 +13,13 @@ class ProductUserController extends Controller
     {   
         if ($request->ajax()) {
             if($request->category != 'all'){
-                $collection = Product::where('status_product','=','Published')->where('id_product_category',$request->category)->paginate(21);
+                $collection = Product::where('status_product','=','Published')->where('id_product_category',$request->category)->paginate(5);
             }else{
-                $collection = Product::where('status_product','=','Published')->paginate(21);
+                $collection = Product::where('status_product','=','Published')->paginate(5);
             }
             return view('pages.web.myproduct.list',compact('collection'));
         }
+        // $collection = Product::where('status_product','=','Published')->paginate(18);
         return view('pages.web.myproduct.main');
     }
     
@@ -26,7 +27,6 @@ class ProductUserController extends Controller
     {
         //
     }
-
     
     public function store(Request $request)
     {

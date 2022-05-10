@@ -1,48 +1,85 @@
 <x-webLayout>
-    <section id="page-title">
-        <div class="container clearfix">
-            <h1>{{ $product->name_product }}</h1>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('product.index') }}">Gift Bouquet</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ $product->name_product }}</li>
-            </ol>
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">Product Details</h3>
+                        <ul>
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="{{ route('product.index') }}">Gift Bouquet</a></li>
+                            <li>{{ $product->name_product }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-    <section id="content">
-        <div class="content-wrap">
-            <div class="container clearfix">
-                <div class="single-product">
-                    <div class="product">
-                        <div class="row gutter-40">
-                            <div class="col-md-5">
-                                <div class="product-image">
-                                    <div id="oc-images" class="owl-carousel carousel-widget" data-lightbox="gallery" data-margin="0" data-items="1" data-pagi="false" data-nav="false" data-loop="true">
-                                        <div class="oc-item">
-                                            <img src="{{ asset('asset/gambar/'.$product->image_product) }}" alt="Pink Printed Dress">
-                                        </div>
-                                    </div>
+    </div>
+    <div class="single-product-main-area">
+        <div class="container container-default custom-area">
+            <div class="row">
+                <div class="col-lg-5 offset-lg-0 col-md-8 offset-md-2 col-custom">
+                    <div class="product-details-img">
+                        <div class="single-product-img swiper-container gallery-top popup-gallery">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a class="w-100" href="{{ asset('asset/gambar/'.$product->image_product) }}">
+                                        <img class="w-100" src="{{ asset('asset/gambar/'.$product->image_product) }}" alt="Product">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="col-md-5 product-desc">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="product-price">Rp. {{ $product->price_product }}</ins></div>
+                        </div>
+                        <div class="single-product-thumb swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{ asset('asset/gambar/'.$product->image_product) }}" alt="Product">
                                 </div>
-                                <div class="line"></div>
-                                <form class="cart mb-0 d-flex justify-content-between align-items-center" method="post" enctype='multipart/form-data'>
-                                    
-                                    <button type="submit"  class="add-to-cart button m-0">Add to cart</button>
-                                </form>
-                                <div class="line"></div>
-                                <p>{!! $product->description_product !!}</p>
                             </div>
-                            <div class="w-100"></div>
                         </div>
                     </div>
                 </div>
-                <div class="line"></div>
+                <div class="col-lg-7 col-custom">
+                    <div class="product-summery position-relative">
+                        <div class="product-head mb-3">
+                            <h2 class="product-title">{{ $product->name_product }}</h2>
+                        </div>
+                        <div class="price-box mb-2">
+                            <span class="regular-price">Rp. {{ $product->price_product }}</span>
+                        </div>
+                        <p class="desc-content mb-5">{!! $product->description_product !!}</p>
+                        <div class="quantity-with_btn mb-5">
+                            <div class="quantity">
+                                <div class="cart-plus-minus">
+                                    <input class="cart-plus-minus-box" value="0" type="text">
+                                    <div class="dec qtybutton">-</div>
+                                    <div class="inc qtybutton">+</div>
+                                </div>
+                            </div>
+                            <div class="add-to_cart">
+                                <a class="btn flosun-button secondary-btn secondary-border rounded-0" href="#">Pesan Sekarang!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-no-text">
+                <div class="col-lg-12 col-custom">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active text-uppercase" id="home-tab" data-toggle="tab" href="#connect-1" role="tab" aria-selected="true">Description</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mb-text" id="myTabContent">
+                        <div class="tab-pane fade show active" id="connect-1" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="desc-content">
+                                <p class="mb-3">
+                                    {!! $product->description_product !!}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
+    </div>
 </x-webLayout>

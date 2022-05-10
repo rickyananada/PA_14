@@ -1,160 +1,128 @@
 <x-webLayout title="Home">
-	
-	<section id="slider" class="slider-element revslider-wrap h-auto include-header">
 
-		<div id="lechefheader_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="le-chef-header64" data-source="gallery" style="background:#000000;padding:0px;">
-		<!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
-			<div id="lechefheader" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
-				<ul>	<!-- SLIDE  -->
-					<li class="dark" data-index="rs-555" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-						<!-- MAIN IMAGE -->
-						<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt="Image"  data-lazyload="include/rs-plugin/demos/assets/images/restaurant4.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" class="rev-slidebg" data-no-retina>
-						<!-- LAYERS -->
-					</li>
-					<!-- SLIDE  -->
-					<li data-index="rs-556" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-						<!-- MAIN IMAGE -->
-						<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt="Image"  data-lazyload="include/rs-plugin/demos/assets/images/foodbg.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" class="rev-slidebg" data-no-retina>
-						<!-- LAYERS -->
-					</li>
-					<!-- SLIDE  -->
-					<li data-index="rs-557" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-						<!-- MAIN IMAGE -->
-						<img src="include/rs-plugin/demos/assets/images/dummy.png"  alt="Image"  data-lazyload="include/rs-plugin/demos/assets/images/foodbg2.jpg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="2" class="rev-slidebg" data-no-retina>
-						<!-- LAYERS -->
-					</li>
-				</ul>
-				<div class="tp-static-layers">
+    <div class="intro11-slider-wrap section-2 mrl-50">
+        <div class="intro11-slider swiper-container">
+            <div class="swiper-wrapper">
+                <div class="intro11-section swiper-slide slide-4 slide-bg-2 bg-position">
+                    <!-- Intro Content Start -->
+                    <div class="intro11-content-2 text-center">
+                        <h1 class="different-title">Welcome</h1>
+                        <h2 class="title">2020 Flower Trend</h2>
+                        <a href="product-details.html" class="btn flosun-button secondary-btn theme-color rounded-0">Shop Now</a>
+                    </div>
+                    <!-- Intro Content End -->
+                </div>
+                <div class="intro11-section swiper-slide slide-3 slide-bg-2 bg-position">
+                    <!-- Intro Content Start -->
+                    <div class="intro11-content text-left">
+                        <h3 class="title-slider text-uppercase">Top Trend</h3>
+                        <h2 class="title">Flowers and Candle <br> Birthday Gift</h2>
+                        <p class="desc-content">Lorem ipsum dolor sit amet, pri autem nemore bonorum te. Autem fierent ullamcorper ius no, nec ea quodsi invenire. </p>
+                        <a href="product-details.html" class="btn flosun-button secondary-btn rounded-0">Shop Now</a>
+                    </div>
+                    <!-- Intro Content End -->
+                </div>
+            </div>
+            <!-- Slider Navigation -->
+            <div class="home1-slider-prev swiper-button-prev main-slider-nav"><i class="lnr lnr-arrow-left"></i></div>
+            <div class="home1-slider-next swiper-button-next main-slider-nav"><i class="lnr lnr-arrow-right"></i></div>
+            <!-- Slider pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
 
-						<!-- LAYER NR. 1 -->
-						<div class="tp-caption tp-shape tp-shapewrapper  tp-static-layer"
-							 id="slider-210-layer-11"
-							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-										data-width="full"
-							data-height="full"
-							data-whitespace="nowrap"
+    <div class="product-area mt-text-2 mb-text-3">
+        <div class="container custom-area-2 overflow-hidden">
+            <div class="row">
+                <!--Section Title Start-->
+                <div class="col-12 col-custom">
+                    <div class="section-title text-center mb-30">
+                        <span class="section-title-1">Wonderful gift</span>
+                        <h3 class="section-title-3">Our Product</h3>
+                    </div>
+                </div>
+                <!--Section Title End-->
+            </div>
+            <div class="row product-row">
+                <div class="col-12 col-custom">
+                    <div class="product-slider swiper-container anime-element-multi">
+                        <div class="swiper-wrapper">
+							@foreach ($collection as $item)
+                            <div class="single-item swiper-slide">
+                                <!--Single Product Start-->
+                                <div class="single-product position-relative mb-30">
+                                    <div class="product-image">
+                                        <a class="d-block" href="{{ route('product.show',$item->id) }}">
+                                            <img src="{{ asset('asset/gambar/'.$item->image_product) }}" alt="" class="product-image-1 w-100">
+                                            <img src="{{ asset('asset/gambar/'.$item->image_product) }}" alt="" class="product-image-2 position-absolute w-100">
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="product-title">
+                                            <h4 class="title-2"> <a href="{{ route('product.show',$item->id) }}">{{ $item->name_product }}</a></h4>
+                                        </div>
+                                        <div class="price-box">
+											<span class="regular-price ">Rp. {{ $item->price_product }}</span>
+                                        </div>
+                                        <a href="{{ route('product.show',$item->id) }}" title="Quick View" class="btn product-cart">View...</a>
+                                    </div>
+                                </div>
+                            </div>
+							@endforeach
+                        </div>
+                        <!-- Slider pagination -->
+                        <div class="swiper-pagination default-pagination"></div>
+						<br>
+						<div class="section-title text-center mb-30"><a href="{{ route('product.index') }}">See More . . .</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-							data-type="shape"
-							data-basealign="slide"
-							data-responsive_offset="off"
-							data-responsive="off"
-							data-startslide="0"
-							data-endslide="2"
-							data-frames='[{"delay":250,"speed":600,"frame":"0","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-							data-textAlign="['inherit','inherit','inherit','inherit']"
-							data-paddingtop="[0,0,0,0]"
-							data-paddingright="[0,0,0,0]"
-							data-paddingbottom="[0,0,0,0]"
-							data-paddingleft="[0,0,0,0]"
-
-							style="z-index: 5;background-color:rgba(0,0,0,0.35);"> </div>
-
-						<!-- LAYER NR. 2 -->
-						<div class="tp-caption   rs-parallaxlevel-3 tp-static-layer"
-							 id="slider-210-layer-13"
-							 data-x="['center','center','center','center']" data-hoffset="['-1','-1','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-149','-149','-190','-190']"
-										data-width="none"
-							data-height="none"
-							data-whitespace="nowrap"
-
-							data-type="image"
-							data-responsive_offset="off"
-							data-responsive="off"
-							data-startslide="0"
-							data-endslide="2"
-							data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:20px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
-							data-textAlign="['inherit','inherit','inherit','inherit']"
-							data-paddingtop="[0,0,0,0]"
-							data-paddingright="[0,0,0,0]"
-							data-paddingbottom="[0,0,0,0]"
-							data-paddingleft="[0,0,0,0]"
-
-							style="z-index: 6;"><img src="include/rs-plugin/demos/assets/images/dummy.png" alt="Image" data-ww="['80px','80px','80px','80px']" data-hh="['80px','80px','80px','80px']" data-lazyload="include/rs-plugin/demos/assets/images/chef-hat-1.png" data-no-retina> </div>
-
-						<!-- LAYER NR. 3 -->
-						<div class="tp-caption   rs-parallaxlevel-3 tp-static-layer"
-							 id="slider-210-layer-5"
-							 data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-70','-50']"
-										data-fontsize="['25','25','20','20']"
-							data-lineheight="['35','35','30','30']"
-							data-width="['640','640','480','320']"
-							data-height="['70','70','none','none']"
-							data-whitespace="normal"
-
-							data-type="text"
-							data-responsive_offset="off"
-							data-responsive="off"
-							data-startslide="0"
-							data-endslide="2"
-							data-frames='[{"delay":1000,"split":"chars","splitdelay":0.02,"speed":1000,"split_direction":"random","frame":"0","from":"sX:1;sY:1;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power2.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
-							data-textAlign="['center','center','center','center']"
-							data-paddingtop="[0,0,0,0]"
-							data-paddingright="[0,0,0,0]"
-							data-paddingbottom="[0,0,0,0]"
-							data-paddingleft="[5,5,5,5]"
-
-							style="z-index: 7; min-width: 640px; max-width: 640px; max-width: 70px; max-width: 70px; white-space: normal; font-size: 25px; line-height: 35px; font-weight: 300; color: #ffffff; letter-spacing: 5px;font-family:Poppins;text-transform:uppercase;">Cusine & Drinks beyond the boundaries of taste. </div>
-
-						<!-- LAYER NR. 4 -->
-						<a class="tp-caption rev-btn   tp-rs-menulink rs-parallaxlevel-3 tp-static-layer"
-							href="#" target="_self"			 id="slider-210-layer-6"
-							 data-x="['center','center','center','center']" data-hoffset="['-150','-150','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['100','100','48','70']"
-										data-fontsize="['14','14','14','12']"
-							data-lineheight="['60','60','60','50']"
-							data-width="['280','280','280','240']"
-							data-height="none"
-							data-whitespace="nowrap"
-
-							data-type="button"
-							data-actions=''
-							data-responsive_offset="off"
-							data-responsive="off"
-							data-startslide="0"
-							data-endslide="2"
-							data-frames='[{"delay":2000,"speed":1000,"frame":"0","from":"y:50px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:rgb(0,0,0);"}]'
-							data-textAlign="['center','center','center','center']"
-							data-paddingtop="[0,0,0,0]"
-							data-paddingright="[0,0,0,0]"
-							data-paddingbottom="[0,0,0,0]"
-							data-paddingleft="[0,0,0,0]"
-
-							style="z-index: 8; min-width: 280px; max-width: 280px; white-space: nowrap; font-size: 14px; line-height: 60px; font-weight: 500; color: #000000; letter-spacing: 3px;font-family:Poppins;background-color:rgb(255,255,255);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;"><i class="icon-star"></i> SEASONAL SPECIALS </a>
-
-						<!-- LAYER NR. 5 -->
-						<a class="tp-caption rev-btn   tp-rs-menulink rs-parallaxlevel-3 tp-static-layer"
-						 href="#" target="_self"			 id="slider-210-layer-7"
-							 data-x="['center','center','center','center']" data-hoffset="['150','150','0','0']"
-							 data-y="['middle','middle','middle','middle']" data-voffset="['100','100','130','142']"
-										data-fontsize="['14','14','14','12']"
-							data-lineheight="['60','60','60','50']"
-							data-width="['280','280','280','240']"
-							data-height="none"
-							data-whitespace="nowrap"
-
-							data-type="button"
-							data-actions=''
-							data-responsive_offset="off"
-							data-responsive="off"
-							data-startslide="0"
-							data-endslide="2"
-							data-frames='[{"delay":2000,"speed":1000,"frame":"0","from":"y:50px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"200","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bg:rgb(0,0,0);"}]'
-							data-textAlign="['center','center','center','center']"
-							data-paddingtop="[0,0,0,0]"
-							data-paddingright="[0,0,0,0]"
-							data-paddingbottom="[0,0,0,0]"
-							data-paddingleft="[0,0,0,0]"
-
-							style="z-index: 9; min-width: 280px; max-width: 280px; white-space: nowrap; font-size: 14px; line-height: 60px; font-weight: 500; color: #000000; letter-spacing: 3px;font-family:Poppins;background-color:rgb(255,255,255);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;"><i class="icon-calendar"></i> MAKE A RESERVATION </a>
+	{{-- <div class="modal flosun-modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close close-button" data-dismiss="modal" aria-label="Close">
+					<span class="close-icon" aria-hidden="true">x</span>
+				</button>
+				<div class="modal-body">
+					<div class="container-fluid custom-area">
+						<div class="row">
+							<div class="col-md-6 col-custom">
+								<div class="modal-product-img">
+									<a class="w-100" href="#">
+										<img class="w-100" src="{{ asset('asset/gambar/'.$item->image_product) }}" alt="Product">
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6 col-custom">
+								<div class="modal-product">
+									<div class="product-content">
+										<div class="product-title">
+											<h4 class="title">{{ $item->name_product }}</h4>
+										</div>
+										<div class="price-box">
+											<span class="regular-price ">Rp. {{ $item->price_product }}</span>
+										</div>
+										<p class="desc-content">{!! $item->description_product !!}</p>
+										<div class="quantity-with-btn">
+											<div class="add-to_btn">
+												<a class="btn flosun-button secondary-btn rounded-0" href="#">Pesan Sekarang!</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+				</div>
 			</div>
-		</div><!-- END REVOLUTION SLIDER -->
+		</div>
+	</div> --}}
 
-	</section>
+    
+    
 
 	
     {{-- <section id="content">
@@ -199,7 +167,7 @@
     </section> --}}
 
 
-	<section id="content">
+	{{-- <section id="content">
 		<div class="content-wrap">
 			<div class="container">
 				<div class="row justify-content-between align-items-center">
@@ -233,5 +201,5 @@
 				<div class="clear"></div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 </x-webLayout>

@@ -24,7 +24,7 @@ class DashboardController extends Controller
     }
     public function index()
     {
-        return view('pages.admin.critics.main');
+        return view('pages.admin.dashboard.main');
     }
 
     public function create()

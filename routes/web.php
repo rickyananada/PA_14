@@ -4,18 +4,21 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\web\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\user\AuthController;
-use App\Http\Controllers\web\UdahGilaController;
 use App\Http\Controllers\admin\CriticsController;
+use App\Http\Controllers\web\ProfileWebController;
 use App\Http\Controllers\admin\AuthAdminController;
 use App\Http\Controllers\web\ProductUserController;
 use App\Http\Controllers\admin\WebProfileController;
 use App\Http\Controllers\admin\ProductAdminController;
 use App\Http\Controllers\admin\ProductCategoryController;
+use App\Http\Controllers\web\CriticsUserController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('product', ProductUserController::class);
-Route::resource('profile', UdahGilaController::class);
+Route::get('/profile', [ProfileWebController::class, 'index'])->name('profile');
+Route::get('/critics', [CriticsUserController::class, 'index'])->name('critics');
+
 
 
 Route::prefix('user/')->name('user.')->group(function(){
@@ -30,7 +33,7 @@ Route::prefix('user/')->name('user.')->group(function(){
 });
 
 Route::prefix('admin/')->name('admin.')->group(function(){
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('critics');
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/', [AuthAdminController::class, 'index']);
     Route::prefix('auth/')->name('auth.')->group(function(){
         Route::get('',[AuthAdminController::class, 'index'])->name('index');

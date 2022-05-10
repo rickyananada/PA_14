@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('theme.web.head')
+<body>
+
+	<div id="preloader">
+        <div class="preloader">
+            <div class="spinner-block">
+                <h1 class="spinner spinner-3 mb-0">.</h1>
+            </div>
+        </div>
+    </div>
+	
+
+	@include('theme.web.header')
+
+	{{ $slot }}
+
+	<br>
+	<br>
+
+	@include('theme.web.footer')
+
+	@include('theme.web.modal')
+
+	<a class="scroll-to-top" href="#">
+        <i class="lnr lnr-arrow-up"></i>
+    </a>
+
+	@include('theme.web.js')
+	@yield('custom_js')
+
+
+</body>
+</html>
+
+
+{{-- <!DOCTYPE html>
+<html lang="en">
+@include('theme.web.head')
 <body class="stretched">
 
 	<!-- Document Wrapper
@@ -32,4 +69,4 @@
 	@include('theme.web.js')
 	@yield('custom_js')
 
-</html>
+</html> --}}

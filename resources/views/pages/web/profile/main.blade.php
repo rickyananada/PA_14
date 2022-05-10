@@ -1,5 +1,4 @@
-<x-profilLayout>
-    
+<x-team1Layout title="Profile">
     <main class="nk-pages">
         <section class="section section-team bg-light">
             <div class="container">
@@ -157,5 +156,4 @@
             </div>
         </section>
     </main>
-
-</x-profilLayout>
+</x-team1Layout>

@@ -1,5 +1,4 @@
-<x-adminLayout> 
-    
+<x-adminLayout>
     <div id="content_list">
         <div class="card card-flush">
             <div class="card-header align-items-center py-5 gap-2 gap-md-5">

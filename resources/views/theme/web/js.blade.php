@@ -1,4 +1,49 @@
-<script src="{{ asset('canvas/js/jquery.js') }}"></script>
+<!-- JS
+============================================ -->
+    <!-- Modernizer JS -->
+    <script src="{{ asset('flosun/js/vendor/modernizr-3.7.1.min.js') }}"></script>
+    <!-- jQuery JS -->
+    <script src="{{ asset('flosun/js/vendor/jquery-3.5.1.min.js') }}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{{ asset('flosun/js/vendor/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Swiper Slider JS -->
+    <script src="{{ asset('flosun/js/plugins/swiper-bundle.min.js') }}"></script>
+    <!-- nice select JS -->
+    <script src="{{ asset('flosun/js/plugins/nice-select.min.js') }}"></script>
+    <!-- Ajaxchimpt js -->
+    <script src="{{ asset('flosun/js/plugins/jquery.ajaxchimp.min.js') }}"></script>
+    <!-- Jquery Ui js -->
+    <script src="{{ asset('flosun/js/plugins/jquery-ui.min.js') }}"></script>
+    <!-- Jquery Countdown js -->
+    <script src="{{ asset('flosun/js/plugins/jquery.countdown.min.js') }}"></script>
+    <!-- jquery magnific popup js -->
+    <script src="{{ asset('flosun/js/plugins/jquery.magnific-popup.min.js') }}"></script>
+
+    <!-- Main JS -->
+    <script src="{{ asset('flosun/js/main.js') }}"></script>
+    
+
+    <script src="{{asset('js/toastr.js')}}"></script>
+    <script src="{{asset('semicolon/js/functions.js')}}"></script>
+    <script src="{{asset('js/swa2.js')}}"></script>
+    <script src="{{asset('js/plugins.js')}}"></script>
+    <script src="{{asset('js/plugin.js')}}"></script>
+    <script src="{{asset('js/routes.js')}}"></script>
+    <script src="{{asset('js/alert.js')}}"></script>
+    <script src="{{asset('js/method.js')}}"></script>
+
+
+
+
+
+
+
+
+
+
+
+{{-- <script src="{{ asset('canvas/js/jquery.js') }}"></script>
 <script src="{{ asset('canvas/js/plugins.min.js') }}"></script>
 
 
@@ -100,4 +145,4 @@
         
         }); //ready
     </script>
-@endsection
+@endsection --}}

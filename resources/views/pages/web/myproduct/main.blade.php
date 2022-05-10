@@ -1,5 +1,64 @@
 <x-webLayout>
+    <div class="breadcrumbs-area position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="breadcrumb-content position-relative section-content">
+                        <h3 class="title-3">All Product</h3>
+                        <ul>
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li>Gift Bouquet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="content_list">
+        <div class="shop-main-area">
+            <div class="container container-default custom-area">
+                <div class="row flex-row-reverse">
+                    <div class="col-12 col-custom widget-mt">
+                        <div class="shop_toolbar_wrapper mb-30">
+                            <div class="shop_toolbar_btn">
+                                <button data-role="grid_4" type="button" class="active btn-grid-4" title="Grid-4"><i class="fa fa-th"></i></button>
+                                <button data-role="grid_3" type="button" class="btn-grid-3" title="Grid-3"> <i class="fa fa-th-large"></i></button>
+                                <button data-role="grid_list" type="button" class="btn-list" title="List"><i class="fa fa-th-list"></i></button>
+                            </div>
+                            <div class="shop-select">
+                                @php
+                                    $categories = \App\Models\ProductCategory::get();
+                                    $category = \App\Models\ProductCategory::count();
+                                @endphp
+                                <form class="d-flex flex-column w-100" id="content_filter">
+                                    <div class="form-group">
+                                        <select class="form-control nice-select w-100" onchange="load_list();" name="category">
+                                            <option selected value="all">Pilih Kategori</option>
+                                            @foreach ($categories as $item)
+                                            <option value="{{ $item->id }}">{{ $item->name_product_category }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="list_result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section('custom_js')
+    <script>
+        load_list(1);
+    </script>
+    @endsection
+
+
+
+    {{-- <div id="content_list">
         <section id="content">
             @php
                 $categories = \App\Models\ProductCategory::get();
@@ -27,15 +86,6 @@
                                         </form>
                                     </ul>
                                 </div>
-                                {{-- <div class="widget widget-filter-links">
-                                    <h4>Sort By</h4>
-                                    <ul class="shop-sorting ps-2">
-                                        <li class="widget-filter-reset active-filter"><a href="#" data-sort-by="original-order">Clear</a></li>
-                                        <li><a href="#" data-sort-by="name">Name</a></li>
-                                        <li><a href="#" data-sort-by="price_lh">Price: Low to High</a></li>
-                                        <li><a href="#" data-sort-by="price_hl">Price: High to Low</a></li>
-                                    </ul>
-                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -43,11 +93,9 @@
             </div>
         </section>
     </div>
-
-
     @section('custom_js')
     <script>
         load_list(1);
     </script>
-    @endsection
+    @endsection --}}
 </x-webLayout>
