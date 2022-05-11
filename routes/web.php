@@ -32,6 +32,7 @@ Route::prefix('user/')->name('user.')->group(function(){
         Route::post('register',[AuthController::class, 'do_register'])->name('register');
         Route::get('logout',[AuthController::class, 'do_logout'])->name('logout');
     });
+    Route::resource('critics', CriticsUserController::class);
 });
 
 Route::prefix('admin/')->name('admin.')->group(function(){

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class RequestUserController extends Controller
 {
@@ -12,6 +14,20 @@ class RequestUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        $this->middleware(function ($request,$next) {
+            if(Auth::check()){
+                $role = Auth::user()->role;
+                if(!$role || $role != 'user'){
+                    return view('pages.user.auth.main');
+                }
+            }else{
+                return redirect()->route('user.auth.index');
+            }
+            return $next($request);
+        });
+    }
+
     public function index()
     {
         return view('pages.web.request.main');

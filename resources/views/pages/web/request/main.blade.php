@@ -1,4 +1,4 @@
-<x-webLayout title="Profile">
+<x-webLayout title="Reques Bouquet">
     <div class="breadcrumbs-area position-relative">
         <div class="container">
             <div class="row">

@@ -4,6 +4,9 @@ namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Critic;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class CriticsUserController extends Controller
 {
@@ -12,6 +15,20 @@ class CriticsUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        $this->middleware(function ($request,$next) {
+            if(Auth::check()){
+                $role = Auth::user()->role;
+                if(!$role || $role != 'user'){
+                    return view('pages.user.auth.main');
+                }
+            }else{
+                return redirect()->route('user.auth.index');
+            }
+            return $next($request);
+        });
+    }
+
     public function index()
     {
         return view('pages.web.critics.main');
@@ -35,7 +52,27 @@ class CriticsUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'critic' => 'required',
+        ]);
+        if($validator->fails()){
+            $errors = $validator->errors();
+            if($errors->has('critic')){
+                return response()->json([
+                    'alert'=>'error',
+                    'message'=>$errors->first('critic')
+                ]);
+            }
+        }
+
+        $kritik = new Critic;
+        $kritik->user_id = Auth::user()->id;
+        $kritik->critic = $request->critic;
+        $kritik->save();
+        return response()->json([
+            'alert'=>'success',
+            'message'=>'Kritik dan saran berhasil dikirim'
+        ]);
     }
 
     /**

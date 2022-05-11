@@ -121,7 +121,6 @@
     </div>
 </div>
 <script>
-    ribuan('price_product');
     $("#status").on('change', function() {
         if(this.value == "Published"){
             $("#product_status").removeClass('bg-danger');

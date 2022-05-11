@@ -2,6 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="robots" content="noindex, follow" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
@@ -25,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('flosun/css/plugins/nice-select.min.css') }}">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('flosun/css/plugins/magnific-popup.css') }}">
-
+	<link href="{{ asset('css/confirm.css') }}"  rel="stylesheet" type="text/css">
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="{{ asset('flosun/css/style.css') }}">
 	<style>
@@ -43,6 +44,6 @@
 	}
 	</style>
 	
-
+	<title>{{config('app.name') . ': ' .$title ?? config('app.name')}}</title>
 </head>
 

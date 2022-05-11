@@ -1,4 +1,4 @@
-<x-webLayout>
+<x-webLayout title="Bouquet">
     <div class="breadcrumbs-area position-relative">
         <div class="container">
             <div class="row">
